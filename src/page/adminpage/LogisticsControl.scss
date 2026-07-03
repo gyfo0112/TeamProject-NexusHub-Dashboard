@@ -1,3 +1,5 @@
+@use '../../styles/mixins' as *;
+
 .control-page {
   padding: 0;
 
@@ -383,5 +385,22 @@
     font-size: 12px;
     color: #64748b;
     line-height: 1.5;
+  }
+}
+
+@include tablet {
+  .control-page {
+    .control-summary-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@include mobile {
+  .control-page {
+    .control-summary-cards {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
   }
 }
