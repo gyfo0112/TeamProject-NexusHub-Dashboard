@@ -441,19 +441,22 @@
     
     .filter-bar {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 16px;
       padding: 12px;
 
       .filter-groups {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
-        gap: 12px;
+        gap: 16px;
 
         .filter-group {
+          flex-direction: column;
+          align-items: center;
           flex-wrap: wrap;
           width: 100%;
+          gap: 8px;
           
           .filter-btn {
             white-space: nowrap;
@@ -463,6 +466,8 @@
 
       .search-box {
         width: 100%;
+        flex-direction: column;
+        align-items: center;
         input {
           width: 100%;
         }
