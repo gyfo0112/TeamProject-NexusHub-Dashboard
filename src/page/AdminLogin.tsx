@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ShieldAlert, Briefcase, Lock, Monitor, Home } from 'lucide-react';
 import './AdminLogin.scss';
+import adminUsers from '../data/adminUsers.json';
 
 export default function AdminLogin() {
   const navigate = useNavigate();
@@ -11,7 +12,14 @@ export default function AdminLogin() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate('/admin/dashboard');
+    
+    const user = adminUsers.find(u => u.id === empId && u.password === password);
+    
+    if (user) {
+      navigate('/admin/dashboard');
+    } else {
+      alert('사원번호 또는 비밀번호가 일치하지 않습니다.');
+    }
   };
 
   return (
