@@ -330,6 +330,15 @@
 
 @include mobile {
   .dock-page {
+    .dashboard-header {
+      .header-left {
+        .title-wrap {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+        }
+      }
+    }
     .dock-summary-cards {
       grid-template-columns: 1fr;
       gap: 12px;

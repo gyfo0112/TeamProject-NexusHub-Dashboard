@@ -389,3 +389,17 @@
     color: #64748b;
   }
 }
+
+@media (max-width: 768px) {
+  .delivery-dispatch-page {
+    .page-header {
+      .header-titles {
+        .title-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+        }
+      }
+    }
+  }
+}
