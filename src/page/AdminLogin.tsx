@@ -47,7 +47,7 @@ export default function AdminLogin() {
                 <Briefcase size={18} className="input-icon" />
                 <input 
                   type="text" 
-                  placeholder="사번 8자리를 입력하세요"
+                  placeholder="사번 8자리를 입력하세요 (테스트: admin)"
                   value={empId}
                   onChange={(e) => setEmpId(e.target.value)}
                   required 
@@ -61,7 +61,7 @@ export default function AdminLogin() {
                 <Lock size={18} className="input-icon" />
                 <input 
                   type="password" 
-                  placeholder="비밀번호를 입력하세요"
+                  placeholder="비밀번호를 입력하세요 (테스트: 1234)"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required 
